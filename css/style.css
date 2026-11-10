@@ -379,6 +379,7 @@ section { padding-block: var(--ruimte-3xl) calc(var(--ruimte-3xl) + var(--ruimte
 .foutmelding--algemeen { background: var(--ijsmist); padding: var(--ruimte-s) var(--ruimte-m); border-radius: var(--hoek-s); }
 
 .inschrijf-kaart__succes { display: grid; gap: var(--ruimte-m); justify-items: start; }
+.inschrijf-kaart__succes[hidden] { display: none; }
 .inschrijf-kaart__succes h2 { margin-bottom: 0; }
 .inschrijf-kaart__succes h2:focus { outline: none; }
 .inschrijf-kaart__succes p:not(.klein) { font-size: var(--fs-tekst-groot); }
