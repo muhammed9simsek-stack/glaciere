@@ -1,0 +1,53 @@
+/* Glacière brand kit v1 – design tokens (bron: Figma, collectie "Glacière brand kit") */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+  /* kleur */
+  --lavendel: #7453A2;          /* hoofdkleur: woordmerk, links, accenten (wit erop 6,0:1) */
+  --lavendel-donker: #5E3F8C;   /* hover links/knoppen */
+  --ijsmist: #F3F0F9;           /* achtergrond, secties, kaarten */
+  --gletsjerblauw: #B8E3EA;     /* accent fris: chips, verlopen */
+  --limoen: #D6F26B;            /* accent speels: enkel CTA-knoppen */
+  --limoen-hover: #C4E24F;
+  --aubergine: #2A1F3D;         /* tekst, donkere footer */
+  --wit: #FFFFFF;
+  --lijn: #DCD5EA;              /* randen, invoervelden */
+  --verloop: linear-gradient(180deg, var(--ijsmist), var(--gletsjerblauw));
+
+  /* letters */
+  --font-titel: 'Space Grotesk', Arial, sans-serif;
+  --font-tekst: 'DM Sans', Arial, sans-serif;
+  --fs-display: clamp(60px, 8vw, 112px);
+  --fs-h1: clamp(44px, 5.5vw, 72px);
+  --fs-h2: clamp(36px, 4vw, 56px);
+  --fs-h3: clamp(28px, 2.6vw, 34px);
+  --fs-tekst-groot: clamp(22px, 1.8vw, 26px);
+  --fs-tekst: clamp(18px, 1.5vw, 22px);
+  --fs-klein: 18px;
+  --fs-label: 18px;   /* Space Grotesk 500, hoofdletters, letter-spacing .08em */
+
+  /* ruimte */
+  --ruimte-xs: 4px; --ruimte-s: 8px; --ruimte-m: 16px; --ruimte-l: 24px;
+  --ruimte-xl: 32px; --ruimte-2xl: 48px; --ruimte-3xl: 64px; --ruimte-4xl: 96px;
+
+  /* hoeken */
+  --hoek-s: 12px; --hoek-m: 24px; --hoek-pil: 999px;
+}
+
+/* basisstijlen */
+body { font-family: var(--font-tekst); font-size: var(--fs-tekst); line-height: 1.5; color: var(--aubergine); background: var(--wit); }
+h1, h2, h3, .display { font-family: var(--font-titel); font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; }
+.label { font-family: var(--font-titel); font-weight: 500; font-size: var(--fs-label); text-transform: uppercase; letter-spacing: .08em; color: var(--lavendel); }
+.woordmerk { font-family: var(--font-titel); font-weight: 700; letter-spacing: -0.03em; color: var(--lavendel); text-transform: lowercase; }
+
+.knop { display: inline-flex; align-items: center; font: 600 22px/1 var(--font-tekst); padding: var(--ruimte-m) var(--ruimte-xl); border-radius: var(--hoek-pil); border: 2px solid transparent; cursor: pointer; text-decoration: none; }
+.knop--primair { background: var(--limoen); color: var(--aubergine); }
+.knop--primair:hover { background: var(--limoen-hover); }
+.knop--secundair { background: transparent; color: var(--lavendel); border-color: var(--lavendel); }
+.knop--secundair:hover { background: var(--lavendel); color: var(--wit); }
+.knop:focus-visible { outline: 3px solid var(--lavendel); outline-offset: 3px; }
+
+.veld { width: 100%; font: 400 20px var(--font-tekst); padding: var(--ruimte-m) var(--ruimte-l); border: 2px solid var(--lijn); border-radius: var(--hoek-s); background: var(--wit); color: var(--aubergine); }
+.veld:focus { border-color: var(--lavendel); outline: none; }
+.chip { display: inline-block; padding: var(--ruimte-s) var(--ruimte-m); border-radius: var(--hoek-pil); background: var(--gletsjerblauw); }
+.kaart { background: var(--wit); border: 2px solid var(--lijn); border-radius: var(--hoek-m); overflow: hidden; }
